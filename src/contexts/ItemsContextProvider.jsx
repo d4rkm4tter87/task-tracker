@@ -4,8 +4,8 @@ import { createContext, useEffect, useState } from "react";
 export const ItemsContext = createContext();
 
 export default function ItemsContextProvider({ children }) {
-  const [items, setItems] = useState(() =>
-    JSON.parse(localStorage.getItem("items") || initialItems)
+  const [items, setItems] = useState(
+    () => JSON.parse(localStorage.getItem("items")) || initialItems
   );
 
   const handleAddItem = (newItemText) => {
