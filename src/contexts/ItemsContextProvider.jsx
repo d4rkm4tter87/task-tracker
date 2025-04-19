@@ -5,7 +5,8 @@ export const ItemsContext = createContext();
 
 export default function ItemsContextProvider({ children }) {
   const [items, setItems] = useState(
-    () => JSON.parse(localStorage.getItem("items")) || initialItems
+    //() => JSON.parse(localStorage.getItem("items")) || initialItems
+    () => initialItems
   );
 
   const handleAddItem = (newItemText) => {
