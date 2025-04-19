@@ -4,8 +4,8 @@ import { useItemsContext } from "../lib/hooks";
 import { useState, useMemo } from "react";
 const sortingOptions = [
   { value: "default", label: "Sort by default" },
-  { value: "packed", label: "Sort by packed" },
-  { value: "unpacked", label: "Sort by unpacked" },
+  { value: "packed", label: "Sort by completed" },
+  { value: "unpacked", label: "Sort by not completed" },
 ];
 
 export default function ItemList() {
